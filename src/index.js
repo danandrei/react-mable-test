@@ -1,18 +1,8 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { createStore, applyMiddleware } from 'redux'
-import { Provider } from 'react-redux'
-import { logger } from 'redux-logger'
-import reducer from './reducers'
-import App from './components/App'
-
-const middleware = [
-];
-
-const store = createStore(
-  reducer,
-  applyMiddleware(...middleware),
-);
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { store } from './helpers/';
+import App from './components/App/';
 
 render(
   <Provider store={store}>
