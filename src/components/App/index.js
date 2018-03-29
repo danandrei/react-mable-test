@@ -4,6 +4,7 @@ import { Router, Route } from 'react-router-dom';
 
 import { history } from '../../helpers/';
 import HomePage from '../HomePage/';
+import ShopPage from '../ShopPage/';
 import LoginPage from '../LoginPage';
 import Navbar from '../Navbar/';
 import './index.scss';
@@ -13,12 +14,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='content-wrap'>
         <Navbar />
         <Router history={ history }>
-          <div>
+          <div className='content'>
             <Route exact path='/' component={HomePage}/>
             <Route path='/login' component={LoginPage}/>
+            <Route path='/shop' component={ShopPage}/>
           </div>
         </Router>
       </div>

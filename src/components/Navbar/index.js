@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { history } from '../../helpers/';
 import { bindActionCreators } from 'redux';
 import { userActions } from '../../actions/';
-import './index.scss';
 
 class Navbar extends Component {
 
@@ -22,12 +21,15 @@ class Navbar extends Component {
       <div className='header'>
         <div className='container'>
           <a className="header-logo" onClick={() => history.push('/')}>
-            <i className="material-icons header-logo header-item">explore</i>
-            <span className="header-logo-text header-item">domain.co</span>
+            <i className="material-icons header-logo">explore</i>
+            <span className="header-logo-text">domain.co</span>
           </a>
 
-          <div className="user-info header-item">
-            {userInfo}
+          <div>
+            <a className="inline-block" onClick={() => history.push('/shop')}>Shop</a>
+            <div className="user-info inline-block m-l-15">
+              {userInfo}
+            </div>
           </div>
         </div>
       </div>

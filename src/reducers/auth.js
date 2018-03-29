@@ -9,8 +9,6 @@ export const auth = (state = initialState, action) => {
       return {
         user: action.user
       };
-    case userConstants.LOGIN_FAILURE:
-      return {};
     case userConstants.LOGOUT:
       return {};
     default:

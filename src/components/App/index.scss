@@ -13,6 +13,22 @@ body {
   font: 100% $font-stack;
 }
 
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.content-wrap {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.content {
+  flex: 1;
+}
+
 .p-0 {
   padding: 0!important;
 }
@@ -189,6 +205,10 @@ body {
   margin-top: 40px!important;
 }
 
+.m-t-50 {
+  margin-top: 50px!important;
+}
+
 .m-b-0 {
   margin-bottom: 0!important;
 }
@@ -221,6 +241,217 @@ body {
   display: inline-block!important;
 }
 
-a:hover {
+.height-100 {
+  height: 100%;
+}
+
+/* Login */
+
+.login-container {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+p.error {
+  font-size: 12px;
+  color: red;
+}
+
+/* Header */
+
+.header {
+  height: 50px;
+  background-color: #0079F4;
+  padding: 10px 0;
+  color: #BCC8D2;
+  line-height: 30px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-logo {
+
+    i {
+      vertical-align: middle;
+      font-size: 30px;
+      color: #fff;
+      margin-left: 0;
+    }
+
+    span {
+      margin: 0 0 0 5px;
+    }
+  }
+
+  .user-info {
+    vertical-align: baseline;
+  }
+
+  a:hover {
+    cursor: pointer;
+    color: #ffffff!important;
+  }
+}
+
+/* Homepage */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.slick-list,
+.slick-track,
+.slick-slide,
+.slider {
+  height: 100%;
+}
+
+.slick-prev, .slick-next {
+  position:absolute;
+  z-index:999;
+  top:50%;
+}
+
+.slick-prev { left: 50px; }
+.slick-next { right: 50px; }
+
+.slick-slide {
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center center;
+}
+
+.slick-slide.slide-1 {
+  background-image: url('http://www.clixmarketing.com/blog/wp-content/uploads/2017/06/95cdfeef.jpeg');
+}
+
+.slick-slide.slide-2 {
+  background-image: url('http://www.clixmarketing.com/blog/wp-content/uploads/2017/06/95cdfeef.jpeg');
+}
+
+.shop-link-button {
+  position: absolute;
+  z-index: 999;
+  bottom: 15%;
+  color: #fff!important;
+  padding: 5px 20px 5px 30px;
+  background-color: #0079F4;
+  text-transform: uppercase;
+  border-radius: 15px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  i, span {
+    vertical-align: middle;
+  }
+}
+
+.shop-link-button:hover {
+  cursor: pointer;
+  background-color: #3399ff;
+}
+
+.mable-copy {
+  position: absolute;
+  z-index: 999;
+  bottom: 20px;
+  color: #fefefe;
+  font-size: 12px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/* shop */
+.filters-wrap {
+  display: flex;
+  justify-content: space-between;
+  color: #717171;
+
+  select {
+    border-radius: 0;
+    border-color: #717171;
+  }
+
+  select, select:focus {
+    color: #717171!important;
+    background-color: rgba(0,0,0,0);
+  }
+}
+
+.shop-item {
+  background-color: #ffffff;
+  color: #717171;
+}
+
+.shop-item-header {
+  height: 40px;
+  padding: 10px 10px;
+  line-height: 20px;
+}
+
+.shop-item-content {
+  height: 200px;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-image: url('https://ahmadalijetplane.files.wordpress.com/2013/06/acb3c668-c6a9-48ac-9e55-8ec4d1c015e2_10_caters_everyday_objects_made_useless_art_14.jpg');
+}
+
+.shop-item-footer {
+  height: 40px;
+}
+
+.shop-item-price {
+  text-align: center;
+  width: 50%;
+  color: #fff;
+  line-height: 40px;
+  background-color: #0079F4;
+  display: inline-block;
+}
+
+.shop-item-action {
+  text-align: center;
+  width: 50%;
+  line-height: 40px;
+  display: inline-block;
+}
+
+.shop-item-action:hover {
   cursor: pointer;
 }

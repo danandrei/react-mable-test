@@ -5,20 +5,15 @@ import { userService } from '../services/';
 const login = (username, password) => {
 
   return dispatch => {
-    userService.login(username, password)
+    return userService.login(username, password)
     .then(user => {
-        dispatch({
-          type: userConstants.LOGIN_SUCCESS,
-          user,
-        });
-
-        history.push('/');
-      }).catch(error => {
-        dispatch({
-          type: userConstants.LOGIN_FAILURE,
-          error,
-        });
+      dispatch({
+        type: userConstants.LOGIN_SUCCESS,
+        user,
       });
+
+      history.push('/');
+    })
   };
 };
 
